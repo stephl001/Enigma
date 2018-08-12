@@ -25,5 +25,3 @@ module Letter =
     
     let offsetLetter offset (IndexLetter letterIndex) = (letterIndex + offset) |> fromModIndex
     let reverseOffsetLetter = (~-) >> offsetLetter
-    let strLetters : (string -> Letter list) = 
-        List.ofSeq >> List.filter Char.IsLetter >> List.map charToLetter
