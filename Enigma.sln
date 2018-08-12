@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Enigma", "Enigma\Enigma.fsproj", "{106495C1-809B-499A-B9A9-9011271E3906}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Enigma.Tests", "Enigma.Tests\Enigma.Tests.fsproj", "{A625A1E6-BD42-4F7E-9690-04F78A066F5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{106495C1-809B-499A-B9A9-9011271E3906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{106495C1-809B-499A-B9A9-9011271E3906}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{106495C1-809B-499A-B9A9-9011271E3906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A625A1E6-BD42-4F7E-9690-04F78A066F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A625A1E6-BD42-4F7E-9690-04F78A066F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A625A1E6-BD42-4F7E-9690-04F78A066F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A625A1E6-BD42-4F7E-9690-04F78A066F5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
