@@ -18,11 +18,12 @@ module Letter =
         | 18 -> S | 19 -> T | 20 -> U | 21 -> V | 22 -> W | 23 -> X | 24 -> Y | 25 -> Z
         | _ -> failwith "Index out of range"
 
-    let charToLetter (c:char) = int c - int 'A' |> fromIndex
-    let (%+) m n = (((m % n) + n) % n)
-    let modAlphabet x = x %+ LettersCount
-    let fromModIndex = modAlphabet >> fromIndex
+    let private charToLetter (c:char) = int c - int 'A' |> fromIndex
+    let private (%+) m n = (((m % n) + n) % n)
+    let private modAlphabet x = x %+ LettersCount
+    let private fromModIndex = modAlphabet >> fromIndex
+    
     let offsetLetter offset (IndexLetter letterIndex) = (letterIndex + offset) |> fromModIndex
     let reverseOffsetLetter = (~-) >> offsetLetter
-    let strLetters (str:string) = 
-        str |> List.ofSeq |> List.filter Char.IsLetter |> List.map charToLetter
+    let strLetters : (string -> Letter list) = 
+        List.ofSeq >> List.filter Char.IsLetter >> List.map charToLetter
