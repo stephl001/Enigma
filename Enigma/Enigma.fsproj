@@ -7,6 +7,12 @@
   <ItemGroup>
     <Compile Include="Domain.fs" />
     <Compile Include="Letter.fs" />
+    <Compile Include="Mapping.fs" />
+    <Compile Include="Mapper.fs" />
+    <Compile Include="Rotor.fs" />
+    <Compile Include="Reflector.fs" />
+    <Compile Include="Socket.fs" />
+    <Compile Include="EnigmaMachine.fs" />
   </ItemGroup>
 
   <ItemGroup>

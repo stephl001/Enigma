@@ -1,7 +1,6 @@
 ﻿namespace Enigma
 
 module Letter =
-    open System
     open Domain
 
     [<Literal>] 
@@ -18,10 +17,10 @@ module Letter =
         | 18 -> S | 19 -> T | 20 -> U | 21 -> V | 22 -> W | 23 -> X | 24 -> Y | 25 -> Z
         | _ -> failwith "Index out of range"
 
-    let private charToLetter (c:char) = int c - int 'A' |> fromIndex
     let private (%+) m n = (((m % n) + n) % n)
     let private modAlphabet x = x %+ LettersCount
     let private fromModIndex = modAlphabet >> fromIndex
     
+    let charToLetter (c:char) = int c - int 'A' |> fromIndex
     let offsetLetter offset (IndexLetter letterIndex) = (letterIndex + offset) |> fromModIndex
     let reverseOffsetLetter = (~-) >> offsetLetter
