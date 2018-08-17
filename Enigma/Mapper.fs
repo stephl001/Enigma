@@ -3,13 +3,12 @@
 module Mapper =
     open Domain
     open Letter
-    open Mapping
 
-    let fromArray = create >> mapLetter
+    let fromArray (mapping:Letter array) (IndexLetter letterIndex) =
+        mapping.[letterIndex]
 
     let reverseMapper (mapper:Mapper) : Mapper =
-        id
-        |> map (fun l -> (l,mapper l)) 
+        Letter.mapAlphabet (fun l -> (l,mapper l))
         |> Array.sortBy snd 
         |> Array.map fst
         |> fromArray
@@ -17,4 +16,5 @@ module Mapper =
     let offsetMapper (IndexLetter offset) (mapper:Mapper) : Mapper = 
         offsetLetter offset >> mapper >> reverseOffsetLetter offset
 
-    let fromString = Mapping.fromString >> mapLetter
+    let fromString : (string->Mapper) = 
+        Seq.map Letter.charToLetter >> Array.ofSeq >> fromArray

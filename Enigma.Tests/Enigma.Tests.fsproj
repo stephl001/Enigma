@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Compile Include="Letter.fs" />
+    <Compile Include="Mapper.fs" />
   </ItemGroup>
 
   <ItemGroup>

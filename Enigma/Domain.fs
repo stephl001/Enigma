@@ -3,7 +3,6 @@ namespace Enigma
 module Domain =
     
     type Letter = A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z
-    type Mapping = internal Mapping of Letter array
     type Mapper = Letter -> Letter
 
     type Rotor = internal {

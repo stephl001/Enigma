@@ -2,7 +2,6 @@ namespace Enigma.Tests
 
 module Letter =
 
-    open Xunit
     open FsUnit.Xunit
     open FsCheck.Xunit
     open Enigma.Domain
